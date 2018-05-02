@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>一键报警</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+
+<div class="map_container" id="mapContainer">
+
+</div>
+<!--顶部-->
+<div class="police_top_box br_3">
+	<div class="name bg_icon">一键报警系统</div>
+	<div class="right">
+		<div class="ret bg_icon" id="loginOutBtn"></div>
+		<div class="adm bg_icon" id="userName"></div>
+	</div>
+</div>
+<!--底部-->
+<div class="police_bottom_box br_3">
+	<!--<div class="sch bg_icon relative" id="recevivingPoing">接警点</div>-->
+	<div class="sch pol bg_icon" id="policeHome">公安局</div>
+</div>
+<!--右侧信息-->
+<div class="police_right_bg" style="display:none;">
+	<div class="police_right_box">
+		<div class="cha_btn"></div>
+		<div class="headimg_box br_3">
+			<div class="img_box"><img src="images/gs.jpg"></div>
+			<div class="name_box">
+				<div class="name">成都市公安局成华分局青龙警署</div>
+				<div class="add bg_icon">成都市成华区东紫路388号</div>
+				<div class="un bg_icon">028-83516630</div>
+			</div>
+		</div>
+		<div class="content_box br_3">
+			<div class="jsgk">
+				<div class="title">警署概况</div>
+				<div class="three">
+					<div class="trem">
+						<div class="ti">成立时间</div>
+						<div class="ti"><span>1991</span>年</div>
+					</div>
+					<div class="trem">
+						<div class="ti">在岗人数</div>
+						<div class="ti"><span>20</span>人</div>
+					</div>
+					<div class="trem trem3">
+						<div class="ti">署长</div>
+						<div class="ti"><span>刘润泽</span></div>
+					</div>
+				</div>
+			</div>
+			<div class="gzry">
+				<div class="title">工作人员</div>
+				<div class="worker_box">
+					<div class="item">
+						<div class="le">
+							<div class="head"><img src="images/head.jpg"></div>
+							<div class="pname_box">
+								<div class="pname">刘润泽</div>
+								<div class="age_box"><span class="gender">男</span><span class="age">29</span></div>
+							</div>
+						</div>
+						<div class="ri">
+							<div class="position bg_icon">署长</div>
+							<div class="un bg_icon">13666250780</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="le">
+							<div class="head"><img src="images/head.jpg"></div>
+							<div class="pname_box">
+								<div class="pname">刘润泽</div>
+								<div class="age_box"><span class="gender">男</span><span class="age">29</span></div>
+							</div>
+						</div>
+						<div class="ri">
+							<div class="position bg_icon">署长</div>
+							<div class="un bg_icon">13666250780</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="le">
+							<div class="head"><img src="images/head.jpg"></div>
+							<div class="pname_box">
+								<div class="pname">刘润泽</div>
+								<div class="age_box"><span class="gender">男</span><span class="age">29</span></div>
+							</div>
+						</div>
+						<div class="ri">
+							<div class="position bg_icon">署长</div>
+							<div class="un bg_icon">13666250780</div>
+						</div>
+					</div>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--左侧报警-->
+<div class="police_left_bg" style="display:none;">
+	<!--<div class="sendMSG" id="closeWeb" style="background: #f00;cursor: pointer;">关闭链接</div>-->
+	<div class="police_left_box">
+		<div class="left_headimg_box br_3">
+			<div class="img_box img_box2 img_red img_blue img_green img_yellow">
+				<div class="date">2017/11/12 12:37</div>
+				<div class="buttom_box">
+					<div class="one br_3"><span class="big">1</span> <span>进行中</span></div>
+					<div class="cancel-alarm br_3">点击取消</div>
+					<div class="two br_3">点击完成</div>
+				</div>
+			</div>
+			<div class="name_box">
+				<div class="name">成都市公安局成华分局青龙警署</div>
+				<div class="add bg_icon">成都市成华区东紫路388号</div>
+				<div class="un bg_icon">028-83516630</div>
+				<div class="bjr bg_icon"><span>报警人</span>(<span>13666250780</span>)</div>
+				<div class="add2 bg_icon">成都市成华区东紫路388号</div>
+			</div>
+		</div>
+		<!--聊天信息-->
+		<div class="chat_box br_3">
+			<div class="chat_scroll_con">
+				<!--<div class="chat_term_box">
+					<div class="chat_term_time">昨天&nbsp;09:21</div>
+					<div class="chat_term_content">
+						<div class="chat_term_head">
+							<div class="i_left"><img src="images/left.png"></div>
+							<img src="images/xx.jpg"></div>
+						<div class="chat_term_font_box">
+							<div class="chat_term_font">请速速挪车</div>
+						</div>
+					</div>
+				</div>
+				<div class="chat_term_box2">
+					<div class="chat_term_time">昨天&nbsp;09:21</div>
+					<div class="chat_term_content">
+						<div class="chat_term_head chat_term_head2">
+							<div class="i_right"><img src="images/right.png"></div>
+							<img src="images/js.jpg"></div>
+						<div class="chat_term_font_box chat_term_font_box2">
+							<div class="chat_term_font chat_term_font2">OK啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</div>
+						</div>
+					</div>
+				</div>-->
+			</div>
+			<!--<div class="chat_term_box">
+				<div class="chat_term_time">昨天&nbsp;09:21</div>
+				<div class="chat_term_content">
+					<div class="chat_term_head">
+						<div class="i_left"><img src="images/left.png"></div>
+						<img src="images/xx.jpg"></div>
+					<div class="chat_term_font_box">
+						<div class="chat_term_font"><img src="images/event_pic.jpg">现场情况</div>
+					</div>
+				</div>
+			</div>
+			<div class="chat_term_box">
+				<div class="chat_term_time">昨天&nbsp;09:21</div>
+				<div class="chat_term_content">
+					<div class="chat_term_head">
+						<div class="i_left"><img src="images/left.png"></div>
+						<img src="images/xx.jpg"></div>
+					<div class="chat_term_font_box">
+						<div class="chat_term_font"><img src="images/yy.png"> <span class="time">15"</span></div>
+					</div>
+				</div>
+			</div>-->
+		</div>
+		<!--弹进弹出-->
+		<div class="tan_btn tan_btn2"></div>
+	</div>
+	<!--聊天输入-->
+	<div class="chat_bottom_box">
+		<div class="input_box">
+			<div class="input_box2 br_3">
+				<div class="test_box" contenteditable="true"><br></div>
+				<div class="expression"></div>
+				<input type="file" id="fileInput">
+			</div>
+		</div>
+		<div class="chat_send_voice"></div>
+		<div class="chat_send_out br_3">发送</div>
+		<!--语音录入-->
+		<div class="chat_bottom_box chat_voice_box" style="display: none;">
+			<div class="chat_send_voice_time">正在录音...</div>
+			<div class="chat_send_voice"></div>
+			<div class="chat_send_out_voice br_3" name="audio_send">发送</div>
+			<div class="chat_send_out2 br_3">取消</div>
+		</div>
+		<!--语音模板-->
+		<div id="voice_temp" style="display: none;">
+			<div name="jquery_jplayer"></div>
+			<div name="jp_container" class="demo-container">
+				<img class="jp-play1"  name="play" src="images/yy.png">
+				<img class="jp-pause1"  name="pause" src="images/yy.gif" style="display: none;">
+			</div>
+		</div>
+		<!--右侧消息模板-->
+		<div class="chat_term_box2" id="chat_right_templete"
+			 style="display: none;">
+			<div class="chat_term_time" name="chat_date"></div>
+			<div class="chat_term_content">
+				<div class="chat_term_head chat_term_head2">
+					<div class="i_right">
+						<img src="images/right.png">
+					</div>
+					<img src="images/js.jpg">
+				</div>
+				<div class="chat_term_font_box chat_term_font_box2">
+					<div class="chat_term_font chat_term_font2" name="chat_content"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--多个报警-->
+<div class="most_price_box">
+	<!--<div class="item">
+		<span class="un">1</span>
+		<span class="ic"><img src="images/san1.png"></span>
+	</div>
+	<div class="item">
+		<span class="un">2</span>
+		<span class="ic"><img src="images/san2.png"></span>
+	</div>-->
+</div>
+
+<!--派警按钮-->
+<button class="paij_btn my-hide" id="pjBtn">派警</button>
+<!--派警-->
+
+<div class="paij_bg" id="pjContent">
+	<div class="pj_bg"></div>
+	<div class="paij_box">
+		<div class="top_box">
+			<div class="title">派警</div>
+			<div class="bjd">成都市第五十七实验学校</div>
+		</div>
+		<div class="leftside_box">
+			<div class="search_bg">
+				<div class="search_box">
+					<button class="search_ic"></button>
+					<input type="text" placeholder="警局搜索">
+				</div>
+			</div>
+			<div class="sidebox">
+				<ul id="policeLists">
+					<!--<li class="max_title">成都市公安局成华分局青龙蜀警</li>
+					<li>
+						<div class="item relative">成都市公安局成华分局</div>
+						<div class="item">成都市公安局成华分局</div>
+						<div class="item">成都市公安局成华分局</div>
+					</li>-->
+				</ul>
+				<!--<ul>
+					<li class="max_title">成都市公安局成华分局青龙蜀警</li>
+				</ul>
+				<ul>
+					<li class="max_title">成都市公安局成华分局青龙蜀警</li>
+				</ul>
+				<ul>
+					<li class="max_title">成都市公安局成华分局青龙蜀警</li>
+				</ul>-->
+			</div>
+		</div>
+		
+		<div class="pjcontent_box">
+			<div class="list_box police-list-box">
+				<div class="title_box">
+					<div class="title">警员列表<span>（0）</span></div>
+					<div class="search_bg">
+						<div class="search_box">
+							<button class="search_ic"></button>
+							<input type="text" placeholder="警员搜索">
+						</div>
+					</div>
+				</div>
+				<div class="list">
+					<div class="police-con">
+					<!--<ul>
+						<li>
+							<div class="li_box">
+								<div class="head_img"><img src="images/head.jpg"></div>
+								<div class="con_box">
+									<div class="name" data-imaccount="12121">刘瑞泽</div>
+									<div class="unmber">13666250786</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="li_box">
+								<div class="head_img"><img src="images/head.jpg"></div>
+								<div class="con_box">
+									<div class="name" data-imaccount="2222">刘瑞泽</div>
+									<div class="unmber">13666250786</div>
+								</div>
+							</div>
+						</li>-->
+						<!--<li>
+							<div class="li_box">
+								<div class="head_img"><img src="images/head.jpg"></div>
+								<div class="con_box">
+									<div class="name">刘瑞泽</div>
+									<div class="unmber">13666250786</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="li_box">
+								<div class="head_img"><img src="images/head.jpg"></div>
+								<div class="con_box">
+									<div class="name">刘瑞泽</div>
+									<div class="unmber">13666250786</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="li_box">
+								<div class="head_img"><img src="images/head.jpg"></div>
+								<div class="con_box">
+									<div class="name">刘瑞泽</div>
+									<div class="unmber">13666250786</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="li_box">
+								<div class="head_img"><img src="images/head.jpg"></div>
+								<div class="con_box">
+									<div class="name">刘瑞泽</div>
+									<div class="unmber">13666250786</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="li_box">
+								<div class="head_img"><img src="images/head.jpg"></div>
+								<div class="con_box">
+									<div class="name">刘瑞泽</div>
+									<div class="unmber">13666250786</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="li_box">
+								<div class="head_img"><img src="images/head.jpg"></div>
+								<div class="con_box">
+									<div class="name">刘瑞泽</div>
+									<div class="unmber">13666250786</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="li_box">
+								<div class="head_img"><img src="images/head.jpg"></div>
+								<div class="con_box">
+									<div class="name">刘瑞泽</div>
+									<div class="unmber">13666250786</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="li_box">
+								<div class="head_img"><img src="images/head.jpg"></div>
+								<div class="con_box">
+									<div class="name">刘瑞泽</div>
+									<div class="unmber">13666250786</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="li_box">
+								<div class="head_img"><img src="images/head.jpg"></div>
+								<div class="con_box">
+									<div class="name">刘瑞泽</div>
+									<div class="unmber">13666250786</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="li_box">
+								<div class="head_img"><img src="images/head.jpg"></div>
+								<div class="con_box">
+									<div class="name">刘瑞泽</div>
+									<div class="unmber">13666250786</div>
+								</div>
+							</div>
+						</li>
+					</ul>-->
+					</div>
+					<div class="fany_box my-hide">
+						<div class="le"></div>
+						<div class="le le2"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="list_box choose-police-box">
+				<div class="title_box">
+					<div class="title">已选警员<span>（0）</span></div>
+				</div>
+				<div class="list">
+					<div class="police-con">
+						<ul></ul>
+					</div>
+					<!--<ul>
+						<li>
+							<div class="li_box">
+								<div class="head_img"><img src="images/head.jpg"></div>
+								<div class="con_box">
+									<div class="name">刘瑞泽</div>
+									<div class="unmber">13666250786</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="li_box">
+								<div class="head_img"><img src="images/head.jpg"></div>
+								<div class="con_box">
+									<div class="name">刘瑞泽</div>
+									<div class="unmber">13666250786</div>
+								</div>
+							</div>
+						</li>
+					
+					</ul>-->
+					<div class="fany_box">
+						<button class="pai_btn">确认派警</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="//webapi.amap.com/maps?v=1.4.2&key=15f7b73e36a2b11a07153a1b9135f9f8&plugin=AMap.ControlBar,AMap.PlaceSearch,AMap.AdvancedInfoWindow,AMap.Geocoder"></script>
+<script src="lib/jquery.min.js"></script>
+<script src="lib/jquery.cookie.js"></script>
+<script src="lib/reconnecting-websocket.js"></script>
+<!--<script src="lib/layer-1.8.5/layer.min.js"></script>-->
+<script src="lib/layer-v3.1.1/layer.js"></script>
+<script src="lib/recorderMP3/js/importScripts.js"></script>
+<script src="lib/jplayer/jquery.jplayer.min.js"></script>
+<script src="lib/recorderMP3/js/libmp3lame.min.js"></script>
+<script src="lib/recorderMP3/js/recorderWorker.js"></script>
+<script src="lib/recorderMP3/js/mp3Worker.js"></script>
+<script src="lib/recorderMP3/recordmp3.js"></script>
+<script src="lib/main.js"></script>
+<script src="index.js"></script>
+<script src="testWebSocketCj.js"></script>
+<link rel="stylesheet" href="lib/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+<script src="lib/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+  $(".police_left_box .chat_box").mCustomScrollbar({
+    theme:"light-thick",
+    scrollInertia:400
+  });
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
